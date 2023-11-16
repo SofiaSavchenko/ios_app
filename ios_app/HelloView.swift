@@ -7,7 +7,7 @@ struct HelloView: View {
     
     var body: some View {
     
-        HelloView(name: name)
+        HelloView(name: "James")
     }
     
     @ViewBuilder
@@ -30,11 +30,11 @@ struct HelloView: View {
             Spacer()
             
             Image("logo").frame(width:56, height: 56)
-            
         }
         .frame(width: .infinity, alignment: .center)
         .padding(.bottom, 32)
-        
+        .padding(.top, 64)
+    
     }
 }
 

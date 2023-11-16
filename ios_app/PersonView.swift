@@ -4,13 +4,11 @@ import SwiftUI
 
 struct PersonView: View {
     
-    var name: String
-    var status: String
-    var image: Image
-    
     var body: some View {
         
-        PersonView(name: name, status: status, image: image)
+        PersonView(name: "Dr. Imran Syahir",
+                   status: "General Doctor",
+                   image: Image("person_1"))
     }
     
     @ViewBuilder

@@ -26,7 +26,6 @@ var body: some View {
             
             Image(imageName).frame(width:24, height: 24)
             
-            
         }.padding(24)
             .background(Color("search_background"))
             .cornerRadius(100)

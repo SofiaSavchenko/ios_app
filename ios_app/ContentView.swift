@@ -4,10 +4,8 @@ struct ContentView: View {
     var body: some View {
         VStack(alignment: .leading) {
             
-            HelloView(name: "James")
-            PersonView(name: "Dr. Imran Syahir",
-                       status: "General Doctor",
-                       image: Image("person_1"))
+            HelloView()
+            PersonView()
             SearchView()
             IconsView()
             Text("Near Doctors")
@@ -21,6 +19,7 @@ struct ContentView: View {
             Spacer()
         }
         .padding(.horizontal, 24)
+        
     }
 }
 
