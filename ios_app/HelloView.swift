@@ -3,7 +3,6 @@ import Foundation
 import SwiftUI
 
 struct HelloView: View {
-    var name: String
     
     var body: some View {
     
@@ -19,17 +18,17 @@ struct HelloView: View {
             VStack(alignment: .leading, spacing: 6){
                 
                 Text("Hello,")
-                    .font(Font.custom("Poppins-Regular", size: 16))
-                    .foregroundColor(Color("dark_blue"))
+                    .font(Font.regularText16)
+                    .foregroundColor(Color.darkBlue)
                 
                 Text("Hi " + name)
-                    .font(Font.custom("Poppins-Bold", size: 20).weight(.bold))
-                    .foregroundColor(Color("dark_grey"))
+                    .font(Font.boldText20)
+                    .foregroundColor(Color.darkGrey)
             }.padding(0)
             
             Spacer()
             
-            Image("logo").frame(width:56, height: 56)
+            Image.logo.frame(width:56, height: 56)
         }
         .frame(width: .infinity, alignment: .center)
         .padding(.bottom, 32)
@@ -40,7 +39,7 @@ struct HelloView: View {
 
 struct HelloView_Previews: PreviewProvider {
     static var previews: some View {
-        HelloView(name: "James")
+        HelloView()
     }
 }
 

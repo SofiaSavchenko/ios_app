@@ -8,12 +8,8 @@ struct ContentView: View {
             PersonView()
             SearchView()
             IconsView()
-            Text("Near Doctors")
-                .font(Font.custom("Poppins-Bold", size: 16))
-            .foregroundColor(Color("dark_grey"))
-            
+            NearDoctorsView()
             CommentsView()
-            
             BottomButtonsView()
             
             Spacer()

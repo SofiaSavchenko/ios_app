@@ -9,13 +9,13 @@ var body: some View {
         
         CommentView(name: "Dr. Joseph Brostito",
                     status: "Dental Specialist",
-                    image: Image("person_2"),
+                    image: Image.person2,
                     raiting: "4.8 (120 Rewiews)",
                     clock: "17:00",
                     distance: "1.2")
         CommentView(name: "Dr. Imran Syahir",
                     status: "General Doctor",
-                    image: Image("person_1"),
+                    image: Image.person1,
                     raiting: "4.8 (120 Rewiews)",
                     clock: "17:00",
                     distance: "1.2")
@@ -47,11 +47,11 @@ struct CommentView: View {
                     
                     VStack(alignment: .leading, spacing: 8){
                         
-                        Text(name).font(Font.custom("Poppins-Bold", size: 16).weight(.bold))
-                            .foregroundColor(Color("dark_grey"))
+                        Text(name).font(Font.boldText16)
+                            .foregroundColor(Color.darkGrey)
                         
-                        Text(status).font(Font.custom("Poppins-Regular", size: 14).weight(.bold))
-                        .foregroundColor(Color("dark_blue"))                   }.padding(0)
+                        Text(status).font(Font.regularText14)
+                        .foregroundColor(Color.darkBlue)                   }.padding(0)
                     
                 }.padding(0)
                 
@@ -59,11 +59,11 @@ struct CommentView: View {
                 
                 HStack(alignment: .center, spacing: 8){
                     
-                    Image("location")
+                    Image.location
                     
                     Text(distance + " KM")
-                        .font(Font.custom("Poppins-Regular", size: 14))
-                        .foregroundColor(Color("dark_blue"))
+                        .font(Font.regularText14)
+                        .foregroundColor(Color.darkBlue)
                     
                     
                 }.padding(0)
@@ -71,20 +71,20 @@ struct CommentView: View {
             }.padding(0)
                 .frame(width: .infinity, alignment: .center)
             
-            Image("Vector 1")
+            Image.vector
                 .frame(maxWidth: .infinity, minHeight: 0, maxHeight: 0)
                 .overlay(Rectangle()
-                    .stroke(Color("grey"), lineWidth:1))
+                    .stroke(Color.grey, lineWidth:1))
             
             HStack(alignment: .top, spacing: 12){
                 
                 HStack(alignment: .center, spacing: 6){
                     
-                    Image("clock_orange")
+                    Image.clockOrange
                     
                     Text(raiting)
-                        .font(Font.custom("Poppins-Regular", size: 12))
-                        .foregroundColor(Color("orange"))
+                        .font(Font.regularText12)
+                        .foregroundColor(Color.orange)
                     
                 }
                     .padding(0)
@@ -92,11 +92,11 @@ struct CommentView: View {
                 
                 HStack(alignment: .center, spacing: 6){
                     
-                    Image("clock_blue")
+                    Image.clockBlue
                     
                     Text("Open at " + clock)
-                        .font(Font.custom("Poppins-Regular", size: 12))
-                        .foregroundColor(Color("person_background"))                }
+                        .font(Font.regularText12)
+                    .foregroundColor(Color.blue)                }
                     .padding(0)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
@@ -107,7 +107,7 @@ struct CommentView: View {
             .padding(.vertical, 20)
             .background(.white)
             .cornerRadius(12)
-            .shadow(color: Color("grey").opacity(0.04),radius: 10, x:2, y:12)
+            .shadow(color: Color.grey.opacity(0.04),radius: 10, x:2, y:12)
     }
 }
 

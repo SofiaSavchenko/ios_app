@@ -19,16 +19,16 @@ struct BottomButtonsView: View {
                     
                     Button(action: {}){
                         
-                        Image("home")
+                        Image.home
                             
                         Text("Home")
                             .font(
-                                Font.custom("Poppis-Bold", size:14).weight(.bold))
-                            .foregroundColor(Color("person_background"))
+                                Font.boldText14)
+                            .foregroundColor(Color.blue)
                     }
                 
             }.padding(12)
-                .background(Color("person_background").opacity(0.1))
+                .background(Color.blue).opacity(0.1)
                 .cornerRadius(12)
         
             
@@ -38,7 +38,7 @@ struct BottomButtonsView: View {
                     
                     Button(action: {}){
                         
-                        Image("calendar")
+                        Image.calendar
                     }
                     
                 }.frame(width:24, height: 24)
@@ -52,7 +52,7 @@ struct BottomButtonsView: View {
                     
                     Button(action: {}){
                         
-                        Image("message")
+                        Image.message
                     }
                 }
                 .frame(width: 24, height: 24)
@@ -66,7 +66,7 @@ struct BottomButtonsView: View {
                     
                     Button(action: {}){
                         
-                        Image("profile")
+                        Image.profile
                         
                     }
                     
@@ -76,7 +76,7 @@ struct BottomButtonsView: View {
             .frame(maxWidth: .infinity, minHeight: 48, maxHeight: 48)
             
         }.padding(EdgeInsets(top: 16, leading: 24, bottom: 16, trailing: 24))
-        .frame(width: 375, height: 80)
+            .frame(width: .infinity, height: 80)
         .background(.white)
             
                   }

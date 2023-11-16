@@ -8,7 +8,7 @@ struct PersonView: View {
         
         PersonView(name: "Dr. Imran Syahir",
                    status: "General Doctor",
-                   image: Image("person_1"))
+                   image: Image.person1)
     }
     
     @ViewBuilder
@@ -27,17 +27,15 @@ struct PersonView: View {
                         
                         Text(name)
                             .font(
-                                Font.custom("Poppins-Bold", size: 16)
-                                    .weight(.bold)
+                                Font.boldText16
                             )
                             .foregroundColor(.white)
                         
                         Text(status)
                             .font(
-                                Font.custom("Poppins-Regular", size: 14)
-                                    .weight(.bold)
+                                Font.regularText14
                             )
-                            .foregroundColor(Color("light_blue"))
+                            .foregroundColor(Color.lightBlue)
                         
                     }.padding(0)
                     
@@ -45,13 +43,13 @@ struct PersonView: View {
                 
                 Spacer()
                 
-                Image("arrow-right").padding(.top, 12)
+                Image.arrowRight.padding(.top, 12)
                 
                 
             }.padding(0)
                 .frame(maxWidth: .infinity, alignment: .center)
             
-            Image("Vector 1")
+            Image.vector
                 .frame(maxWidth: .infinity, minHeight: 0, maxHeight: 0)
                 .overlay(
                     Rectangle()
@@ -61,9 +59,9 @@ struct PersonView: View {
                 
                 HStack(alignment: .center, spacing: 8){
                     
-                    Image("calendar-2")
+                    Image.calendar2
                     Text("Sunday, 12 June")
-                        .font(Font.custom("Poppins-Regular", size:12))
+                        .font(Font.regularText12)
                         .foregroundColor(.white)
                     
                 }.padding(0)
@@ -71,8 +69,8 @@ struct PersonView: View {
                 
                 HStack(alignment: .center, spacing: 8){
                     
-                    Image("clock")
-                    Text("11:00 - 12:00 AM").font(Font.custom("Poppins-Regular", size:12))
+                    Image.clock
+                    Text("11:00 - 12:00 AM").font(Font.regularText12)
                     .foregroundColor(.white)                }
                 .padding(0)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -82,7 +80,7 @@ struct PersonView: View {
             
         }.padding(20)
             .frame(width: .infinity, alignment: .top)
-            .background(Color("person_background"))
+            .background(Color.blue)
             .cornerRadius(12)
             .padding(.bottom, 20)
     }
@@ -92,6 +90,6 @@ struct PersonView: View {
 
 struct PersonView_Previews: PreviewProvider {
     static var previews: some View {
-        PersonView(name: "James", status: "General Doctor", image: Image("person_1"))
+        PersonView()
     }
 }
