@@ -29,14 +29,14 @@ struct PersonView2: View {
                         
                         Text(name)
                             .font(
-                                Font.custom("Poppins", size: 16)
+                                Font.custom("Poppins-Bold", size: 16)
                                     .weight(.bold)
                             )
                             .foregroundColor(.white)
                         
                         Text(status)
                             .font(
-                                Font.custom("Poppins", size: 14)
+                                Font.custom("Poppins-Regular", size: 14)
                                     .weight(.bold)
                             )
                             .foregroundColor(Color("light_blue"))

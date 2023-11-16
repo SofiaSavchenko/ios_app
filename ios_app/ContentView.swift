@@ -14,6 +14,8 @@ struct ContentView: View {
                 .font(Font.custom("Poppins-Bold", size: 16))
             .foregroundColor(Color("dark_grey"))
             
+            CommentsView()
+            
             Spacer()
         }
         .padding(.horizontal, 24)
