@@ -7,18 +7,18 @@ var body: some View {
     
     VStack(alignment: .leading, spacing: 12){
         
-        CommentView(name: "Dr. Joseph Brostito",
-                    status: "Dental Specialist",
+        CommentView(name: Text.person2,
+                    status: Text.status2,
                     image: Image.person2,
-                    raiting: "4.8 (120 Rewiews)",
-                    clock: "17:00",
-                    distance: "1.2")
-        CommentView(name: "Dr. Imran Syahir",
-                    status: "General Doctor",
+                    raiting: Text.raiting2,
+                    clock: Text.clock2,
+                    distance: Text.distance2)
+        CommentView(name: Text.person1,
+                    status: Text.status1,
                     image: Image.person1,
-                    raiting: "4.8 (120 Rewiews)",
-                    clock: "17:00",
-                    distance: "1.2")
+                    raiting: Text.raiting1,
+                    clock: Text.clock1,
+                    distance: Text.distance1)
         
     }.padding(0)
                         
@@ -28,12 +28,12 @@ var body: some View {
 
 struct CommentView: View {
     
-    var name: String
-    var status: String
+    var name: Text
+    var status: Text
     var image: Image
-    var raiting: String
-    var clock: String
-    var distance: String
+    var raiting: Text
+    var clock: Text
+    var distance: Text
 
     var body: some View {
     
@@ -47,10 +47,10 @@ struct CommentView: View {
                     
                     VStack(alignment: .leading, spacing: 8){
                         
-                        Text(name).font(Font.boldText16)
+                        name.font(Font.boldText16)
                             .foregroundColor(Color.darkGrey)
                         
-                        Text(status).font(Font.regularText14)
+                        status.font(Font.regularText14)
                         .foregroundColor(Color.darkBlue)                   }.padding(0)
                     
                 }.padding(0)
@@ -61,7 +61,7 @@ struct CommentView: View {
                     
                     Image.location
                     
-                    Text(distance + " KM")
+                    distance
                         .font(Font.regularText14)
                         .foregroundColor(Color.darkBlue)
                     
@@ -82,7 +82,7 @@ struct CommentView: View {
                     
                     Image.clockOrange
                     
-                    Text(raiting)
+                    raiting
                         .font(Font.regularText12)
                         .foregroundColor(Color.orange)
                     
@@ -94,9 +94,18 @@ struct CommentView: View {
                     
                     Image.clockBlue
                     
-                    Text("Open at " + clock)
-                        .font(Font.regularText12)
-                    .foregroundColor(Color.blue)                }
+                    HStack(spacing: 0){
+                        
+                        Text.open
+                            .font(Font.regularText12)
+                        .foregroundColor(Color.blue)
+                        
+                        clock
+                            .font(Font.regularText12)
+                        .foregroundColor(Color.blue)
+                    }
+                    
+                                    }
                     .padding(0)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 

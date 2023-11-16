@@ -21,7 +21,7 @@ struct BottomButtonsView: View {
                         
                         Image.home
                             
-                        Text("Home")
+                        Text.home
                             .font(
                                 Font.boldText14)
                             .foregroundColor(Color.blue)

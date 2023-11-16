@@ -6,24 +6,33 @@ struct HelloView: View {
     
     var body: some View {
     
-        HelloView(name: "James")
+        HelloView(name: Text.name)
     }
     
     @ViewBuilder
     
-    private func HelloView(name: String) -> some View {
+    private func HelloView(name: Text) -> some View {
         
         HStack(alignment: .center){
             
             VStack(alignment: .leading, spacing: 6){
                 
-                Text("Hello,")
+                Text.hello
                     .font(Font.regularText16)
                     .foregroundColor(Color.darkBlue)
                 
-                Text("Hi " + name)
-                    .font(Font.boldText20)
+                HStack(spacing: 0){
+                    
+                    Text.hi
+                        .font(Font.boldText20)
+                        .foregroundColor(Color.darkGrey)
+                    
+                    Text.name.font(Font.boldText20)
                     .foregroundColor(Color.darkGrey)
+                    
+                }
+                
+                
             }.padding(0)
             
             Spacer()

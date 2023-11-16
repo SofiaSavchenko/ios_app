@@ -28,7 +28,7 @@ extension Image{
     
     static let person1 = Image("person_1")
     
-    static let person2 = Image("perso_2")
+    static let person2 = Image("person_2")
     
     static let profileAdd = Image("profile-add")
     

@@ -6,14 +6,14 @@ struct PersonView: View {
     
     var body: some View {
         
-        PersonView(name: "Dr. Imran Syahir",
-                   status: "General Doctor",
+        PersonView(name: Text.person1,
+                   status: Text.status1,
                    image: Image.person1)
     }
     
     @ViewBuilder
     
-    private func PersonView(name: String, status: String, image: Image) -> some View {
+    private func PersonView(name: Text, status: Text, image: Image) -> some View {
         
         VStack(alignment: .center, spacing: 16){
             
@@ -25,13 +25,13 @@ struct PersonView: View {
                     
                     VStack(alignment: .leading, spacing: 8){
                         
-                        Text(name)
+                        name
                             .font(
                                 Font.boldText16
                             )
                             .foregroundColor(.white)
                         
-                        Text(status)
+                        status
                             .font(
                                 Font.regularText14
                             )
@@ -60,7 +60,7 @@ struct PersonView: View {
                 HStack(alignment: .center, spacing: 8){
                     
                     Image.calendar2
-                    Text("Sunday, 12 June")
+                    Text.dataPerson1
                         .font(Font.regularText12)
                         .foregroundColor(.white)
                     
@@ -70,7 +70,7 @@ struct PersonView: View {
                 HStack(alignment: .center, spacing: 8){
                     
                     Image.clock
-                    Text("11:00 - 12:00 AM").font(Font.regularText12)
+                    Text.timePerson1.font(Font.regularText12)
                     .foregroundColor(.white)                }
                 .padding(0)
                 .frame(maxWidth: .infinity, alignment: .leading)

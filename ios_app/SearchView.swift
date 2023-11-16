@@ -10,7 +10,7 @@ struct SearchView: View {
             
             Image.search
             
-            Text("Search doctor or health issue").font(Font.regularText15)
+            Text.search.font(Font.regularText15)
                 .foregroundColor(Color.darkBlue)
         }
         .padding(16)

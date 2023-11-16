@@ -6,17 +6,17 @@ struct IconsView: View {
 var body: some View {
     
     HStack(alignment: .top, spacing: 23){
-        CircleView(image: Image.sun, textName: "Covid 19")
-        CircleView(image: Image.profileAdd, textName: "Doctor")
-        CircleView(image: Image.link, textName: "Medicine")
-        CircleView(image: Image.hospital, textName: "Hospital")
+        CircleView(image: Image.sun, textName: Text.covid19)
+        CircleView(image: Image.profileAdd, textName: Text.doctor)
+        CircleView(image: Image.link, textName: Text.medicine)
+        CircleView(image: Image.hospital, textName: Text.hospital)
     }.padding(.bottom, 32)
     .frame(width: .infinity)    }
 }
 
 struct CircleView: View {
 var image: Image
-var textName : String
+var textName : Text
 
 var body: some View {
     
@@ -30,7 +30,7 @@ var body: some View {
             .background(Color.grey)
             .cornerRadius(100)
         
-            Text(textName)
+        textName
             .font(Font.regularText15)
             .foregroundColor(Color.darkBlue)
         

@@ -5,7 +5,7 @@ struct NearDoctorsView: View {
     
     var body: some View {
         
-            Text("Near Doctors")
+        Text.nearDoctors
             .font(Font.boldText16)
             .foregroundColor(Color.darkGrey)
             .frame(alignment: .leading)
