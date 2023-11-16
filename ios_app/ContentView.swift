@@ -5,7 +5,7 @@ struct ContentView: View {
         VStack(alignment: .leading) {
             
             HelloView(name: "James")
-            PersonView2(name: "Dr. Imran Syahir",
+            PersonView(name: "Dr. Imran Syahir",
                        status: "General Doctor",
                        image: Image("person_1"))
             SearchView()
@@ -15,6 +15,8 @@ struct ContentView: View {
             .foregroundColor(Color("dark_grey"))
             
             CommentsView()
+            
+            BottomButtonsView()
             
             Spacer()
         }

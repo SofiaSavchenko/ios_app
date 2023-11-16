@@ -12,8 +12,7 @@ var body: some View {
                     image: Image("person_2"),
                     raiting: "4.8 (120 Rewiews)",
                     clock: "17:00",
-                    distance: "1.2"
-        )
+                    distance: "1.2")
         CommentView(name: "Dr. Imran Syahir",
                     status: "General Doctor",
                     image: Image("person_1"),
@@ -70,7 +69,7 @@ struct CommentView: View {
                 }.padding(0)
                 
             }.padding(0)
-                .frame(width: 295, alignment: .center)
+                .frame(width: .infinity, alignment: .center)
             
             Image("Vector 1")
                 .frame(maxWidth: .infinity, minHeight: 0, maxHeight: 0)
