@@ -26,7 +26,6 @@ struct BottomButtonsView: View {
                                     Font.boldText14)
                                 .foregroundColor(Color.blue)                       }
                         
-                        
                     }
                 .background(Color.transparentBlue.opacity(0.1))
                 .cornerRadius(12)
