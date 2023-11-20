@@ -2,19 +2,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(alignment: .leading) {
+        
+        VStack(alignment: .leading){
             
             HelloView()
-            PersonView()
-            SearchView()
-            IconsView()
-            NearDoctorsView()
-            CommentsView()
+            
+            ScrollView(){
+                
+                VStack(alignment: .leading){
+                    
+                    PersonView()
+                    SearchView()
+                    IconsView()
+                    NearDoctorsView()
+                    CommentsView()
+                    
+                }
+                
+            }
+            
             BottomButtonsView()
             
-            Spacer()
-        }
-        .padding(.horizontal, 24)
+        }.padding(.horizontal, 24)
         
     }
 }

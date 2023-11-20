@@ -41,7 +41,7 @@ struct HelloView: View {
         }
         .frame(width: .infinity, alignment: .center)
         .padding(.bottom, 32)
-        .padding(.top, 64)
+        //.padding(.top, 64)
     
     }
 }
