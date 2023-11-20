@@ -40,6 +40,4 @@ extension Image{
     
     static let vector = Image("Vector 1")
     
-    
-    
 }
